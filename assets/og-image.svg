@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">Sua Marca: parafusos e fixadores em São Paulo</title>
+  <rect width="1200" height="630" fill="#f0f2f3"/>
+  <rect x="0" y="0" width="1200" height="14" fill="#1d3c52"/>
+  <g fill="none" stroke="#a2c4d1" stroke-width="2" opacity="0.7">
+    <path d="M980 120 1080 178v116l-100 58-100-58V178z"/><circle cx="980" cy="236" r="34"/>
+    <path d="M1090 380 1150 415v70l-60 35-60-35v-70z"/><circle cx="1090" cy="450" r="20"/>
+  </g>
+  <path d="M80 84 94.4 92.3v16.6L80 117.2l-14.4-8.3V92.3z" fill="none" stroke="#1d3c52" stroke-width="3" stroke-linejoin="round"/><circle cx="80" cy="100.6" r="5" fill="#1d3c52"/>
+  <text x="110" y="112" font-family="Hanken Grotesk, system-ui, Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#161c22">Sua Marca</text>
+  <text x="80" y="300" font-family="Hanken Grotesk, system-ui, Segoe UI, Arial, sans-serif" font-size="74" font-weight="700" fill="#161c22" letter-spacing="-1.5">Parafusos e fixadores</text>
+  <text x="80" y="386" font-family="Hanken Grotesk, system-ui, Segoe UI, Arial, sans-serif" font-size="74" font-weight="700" fill="#1d3c52" letter-spacing="-1.5">para a indústria</text>
+  <text x="80" y="470" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="30" fill="#4c5762">Estoque pronto em São Paulo. Atende todo o Brasil.</text>
+</svg>

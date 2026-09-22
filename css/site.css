@@ -1,0 +1,62 @@
+/* Section styles for this site. Base rules and tokens live in base.css and tokens.css: use the custom properties, never raw values. */
+/* Style surfaces: Thin rules on the neutral scale only. No cards and no shadows. Media medium radius. */
+/* Decorative effect allowed on this page (max one): None */
+
+/* brand mark: sextavado com furo, na cor da marca (herdado do logo com cabeça de parafuso) */
+.brand--mark { display: inline-flex; align-items: center; gap: var(--space-2); }
+.brand__hex { fill: none; stroke: var(--color-accent); stroke-width: 2; stroke-linejoin: round; }
+
+/* hero: statement */
+.hero--statement { padding-block: var(--space-9) var(--space-8); border-bottom: 1px solid var(--color-rule); }
+.hero__inner { display: grid; gap: var(--space-5); }
+.hero__inner .label { margin: 0; }
+.hero__inner h1 { max-width: 20ch; font-size: var(--step-5); letter-spacing: -0.02em; }
+.hero__inner .lead { max-width: 52ch; }
+
+/* twelve column grid: content offset to columns 2 to 11 from 64em (signature of the style) */
+@media (min-width: 64em) {
+  .hero__inner > *, .services__head, .proof__head, .location__row, .location__media { grid-column: 2 / 12; }
+  .hero__inner { row-gap: var(--space-5); }
+  .hero--statement .container, .section--services .container, .section--proof .container, .section--location .container { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--space-6); }
+  .section--services .container > *, .section--proof .container > *, .section--location .container > * { grid-column: 2 / 12; }
+  .stack--lg > * + * { margin-top: var(--space-6); }
+}
+
+/* services: services-open-columns */
+.services__head { display: grid; gap: var(--space-3); }
+.services__columns { display: grid; gap: var(--space-6) var(--space-7); }
+.services__columns h3 { font-size: var(--step-0); font-weight: var(--weight-display-strong); margin-bottom: var(--space-2); }
+.services__columns p { font-size: var(--step--1); color: var(--color-muted); }
+.services__columns a { color: var(--color-accent); }
+@media (min-width: 40em) { .services__columns { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 64em) { .services__columns { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* proof: proof-list */
+.proof__head { display: grid; gap: var(--space-3); }
+.proof__list li { padding-block: var(--space-5); border-top: 1px solid var(--color-rule); }
+.proof__list li:last-child { border-bottom: 1px solid var(--color-rule); }
+.proof__list blockquote { margin: 0 0 var(--space-2); font-size: var(--step-1); font-weight: var(--weight-body-medium); }
+.proof__list blockquote p::before { content: "\201C"; }
+.proof__list blockquote p::after { content: "\201D"; }
+@media (min-width: 48em) {
+  .proof__list li { display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-6); align-items: baseline; }
+  .proof__list blockquote { margin-bottom: 0; }
+}
+
+/* location: location-inline */
+.location__row { display: grid; gap: var(--space-5); margin: 0; }
+.location__row dd { margin: 0; }
+.location__row .label { margin-bottom: var(--space-1); }
+@media (min-width: 40em) { .location__row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 64em) { .location__row { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--space-7); } }
+.location__media { margin: 0; border-radius: var(--radius-md); }
+
+/* contact: contact-minimal-form */
+.contact__inner { max-width: 32rem; }
+.contact__inner a { color: var(--color-accent); }
+.section--contact { border-top: 1px solid var(--color-rule); }
+
+/* reveal ao rolar: só com JS; sem JS tudo visível; sem movimento em prefers-reduced-motion */
+html.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 700ms ease, transform 700ms ease; }
+html.js .reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { html.js .reveal { opacity: 1; transform: none; } }
